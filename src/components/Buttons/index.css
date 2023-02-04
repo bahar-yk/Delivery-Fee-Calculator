@@ -1,0 +1,19 @@
+.button {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--button);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+button:hover {
+  background-color: var(--button-hover);
+}
