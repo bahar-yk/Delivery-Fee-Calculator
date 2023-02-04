@@ -1,20 +1,19 @@
 import React, { useRef, useState } from "react";
 import Card from "./components/Card";
-import Entries from "./components/Entries";
+import FieldInput from "./components/FieldInput";
 import "./index.css";
-import "./App.css";
+
 import Buttons from "./components/Buttons";
 import {
   valueHandler,
   distanceHandler,
   itemHandler,
-} from "./components/Entries/rules";
+} from "./components/FieldInput/rules";
 
 function App() {
   const [fee, setFee] = useState(0);
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    (event.target as HTMLFormElement).reset();
     const cart = valueHandler(allValue.current.cartValue);
     const distance = distanceHandler(allValue.current.distanceValue);
     const item = itemHandler(allValue.current.itemValue);
@@ -48,8 +47,8 @@ function App() {
       <Card>
         <h1>Delivery Fee Calculator</h1>
         <hr></hr>
-        <form onSubmit={submitHandler}>
-          <Entries
+        <form onSubmit={submitHandler} className="formStyle">
+          <FieldInput
             label="Cart Value :"
             placeholder="Please insert Cart Value"
             type="number"
@@ -62,7 +61,7 @@ function App() {
               allValue.current.cartValue = Number(event.target.value);
             }}
           />
-          <Entries
+          <FieldInput
             label="Delivery distance :"
             placeholder="Please insert Delivery distance"
             type="number"
@@ -73,7 +72,7 @@ function App() {
               allValue.current.distanceValue = Number(event.target.value);
             }}
           />
-          <Entries
+          <FieldInput
             label="Amount of items :"
             placeholder="Please insert Amount of items "
             type="number"
@@ -86,7 +85,7 @@ function App() {
               allValue.current.itemValue = Number(event.target.value);
             }}
           />
-          <Entries
+          <FieldInput
             label="Date & Time :"
             type="datetime-local"
             name="dateValue"
