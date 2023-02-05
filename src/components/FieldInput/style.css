@@ -6,7 +6,6 @@
 }
 
 .wolt-field-input label {
-  padding: 10px;
   font-weight: bold;
 }
 
@@ -15,6 +14,7 @@
   border-radius: 8px;
   padding: 10px;
   border: 0px;
+  outline-color: var(--button-hover);
 }
 
 .wolt-field-input

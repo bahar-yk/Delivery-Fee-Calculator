@@ -1,34 +1,34 @@
 export const valueHandler = (cartValue: number) => {
-  let resualt = 0;
+  let result = 0;
   if (cartValue < 10) {
-    resualt = 10 - cartValue;
+    result = 10 - cartValue;
   }
   if (cartValue >= 100) {
-    resualt = 0;
+    result = 0;
   }
-  return resualt;
+  return result;
 };
 
 export const distanceHandler = (distanceValue: number) => {
-  let resault = 0;
+  let result = 0;
   if (distanceValue <= 1000) {
-    resault = 2;
+    result = 2;
   }
   if (distanceValue > 1000) {
-    resault = 2 + Math.ceil(distanceValue - 1000) / 500;
+    result = 2 + Math.ceil(distanceValue - 1000) / 500;
   }
-  return resault;
+  return result;
 };
 
 export const itemHandler = (itemValue: number) => {
-  let resault = 0;
+  let result = 0;
   if (itemValue <= 5) {
-    resault = 0.5;
+    result = 0.5;
   }
   if (itemValue > 5 && itemValue <= 12) {
-    resault = (itemValue - 4) * 0.5;
+    result = (itemValue - 4) * 0.5;
   } else {
-    resault = (itemValue - 4) * 0.5 + 1.2;
+    result = (itemValue - 4) * 0.5 + 1.2;
   }
-  return resault;
+  return result;
 };

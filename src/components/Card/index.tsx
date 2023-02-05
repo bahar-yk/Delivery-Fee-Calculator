@@ -7,6 +7,6 @@ interface ICardProps {
 
 function Card(props: ICardProps) {
   const { children } = props;
-  return <div className="card">{children}</div>;
+  return <div className="wolt-card">{children}</div>;
 }
 export default Card;
