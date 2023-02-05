@@ -2,12 +2,7 @@ import React, { useRef, useState } from "react";
 import Card from "../../components/Card";
 import FieldInput from "../../components/FieldInput";
 import Buttons from "../../components/Buttons";
-import {
-  valueHandler,
-  distanceHandler,
-  itemHandler,
-} from "../../components/FieldInput/rules";
-import { MAX_CARD_ITEM_FREE, RUSH_DAY, RUSH_HOURS, WEEK_DAYS } from "./config";
+import { sumAllCharges } from "./rules";
 import "./style.css";
 
 function DeliveryFeePage() {
@@ -15,29 +10,14 @@ function DeliveryFeePage() {
 
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const cart = valueHandler(allValue.current.cartValue);
-    const distance = distanceHandler(allValue.current.distanceValue);
-    const item = itemHandler(allValue.current.itemValue);
-    const sumThree = cart + distance + item;
-    if (allValue.current.cartValue >= MAX_CARD_ITEM_FREE) {
-      setFee(0);
-    } else {
-      setFee(sumThree * dateHandler(allValue.current.dateValue));
-    }
-  };
-
-  const dateHandler = (dateValue: Date) => {
-    const currentDay = dateValue.getDay();
-    const currentTime = dateValue.getHours();
-    let factor = 1;
-    if (
-      currentDay === WEEK_DAYS[RUSH_DAY] &&
-      currentTime >= RUSH_HOURS.start &&
-      currentTime <= RUSH_HOURS.end
-    ) {
-      factor = 1.2;
-    }
-    return factor;
+    const { cartValue, distanceValue, itemValue, dateValue } = allValue.current;
+    const result = sumAllCharges(
+      cartValue,
+      distanceValue,
+      itemValue,
+      dateValue
+    );
+    setFee(result);
   };
 
   const allValue = useRef({

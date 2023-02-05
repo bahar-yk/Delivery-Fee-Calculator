@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Wolt Delivery Fee Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CRA has been used to boilerplate the project with typescript support. Page directory has been defined so anyone can add extra page in that directory without needing to change too much code from `App.tsx`. All needed components are inside Components directory and each component has it's own style for modularity.
+The app have HTML validation when user provide not valid input and press the calculate button. This bring more simplicity to code but UI/UX wise maybe we use to see validation erros below each input. I assumed the scope of the task dont expect us to go over validation if we can do it easier with HTML. Config file has been provided in case these rules value needed to be changed and it would be easier to just change the configs rather than change the hard coded value inside the functions.
+
+- Font's has been added via [google fonts](https://fonts.google.com/),
+- Color schema insipired from [coolors](https://coolors.co)
+- Icons in front of the input are Material Fonts
+- Wolt favIcon is included
 
 ## Available Scripts
 
@@ -28,19 +34,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
