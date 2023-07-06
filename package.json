@@ -1,5 +1,5 @@
 {
-  "name": "wolt-delivery-calculation",
+  "name": "delivery-calculation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

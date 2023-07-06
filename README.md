@@ -1,4 +1,4 @@
-# Wolt Delivery Fee Calculator
+# Delivery Fee Calculator
 
 CRA has been used to boilerplate the project with typescript support. Page directory has been defined so anyone can add extra page in that directory without needing to change too much code from `App.tsx`. All needed components are inside Components directory and each component has it's own style for modularity.
 The app have HTML validation when user provide not valid input and press the calculate button. This bring more simplicity to code but UI/UX wise maybe we use to see validation erros below each input. I assumed the scope of the task dont expect us to go over validation if we can do it easier with HTML. Config file has been provided in case these rules value needed to be changed and it would be easier to just change the configs rather than change the hard coded value inside the functions.
@@ -6,7 +6,6 @@ The app have HTML validation when user provide not valid input and press the cal
 - Font's has been added via [google fonts](https://fonts.google.com/),
 - Color schema insipired from [coolors](https://coolors.co)
 - Icons in front of the input are Material Fonts
-- Wolt favIcon is included
 
 ## Available Scripts
 
